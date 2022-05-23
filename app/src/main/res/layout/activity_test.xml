@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TestActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_my_greetings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Manually Creating Activity"
+            android:textSize="24sp"
+            android:textColor="#FF0000"
+            android:fontFamily="sans-serif-smallcaps"/>
+
+        <ImageView
+            android:id="@+id/iv_my_greetings"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/pic1"
+            android:layout_below="@id/tv_my_greetings"/>
+
+        <Button
+            android:id="@+id/btn_chinese_greetings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chinese Greetings"
+            android:layout_below="@id/iv_my_greetings"
+            android:layout_alignParentRight="true"
+            android:layout_margin="16dp"
+            android:padding="20dp"/>
+
+        <Button
+            android:id="@+id/btn_random_greetings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Random"
+            android:layout_toLeftOf="@id/btn_chinese_greetings"
+            android:layout_alignBottom="@id/btn_chinese_greetings"
+            android:padding="20dp"/>
+
+        <EditText
+            android:id="@+id/et_my_greetings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/tv_my_greetings"
+            android:layout_toLeftOf="@id/btn_say_hi"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:hint="Say hi!"
+            android:inputType="text"/>
+
+        <ImageButton
+            android:id="@+id/btn_say_hi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_feedback"
+            android:layout_alignBottom="@id/et_my_greetings"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"/>
+
+        <CheckBox
+            android:id="@+id/cb_banana"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fruit_banana"
+            android:layout_above="@id/et_my_greetings"
+            android:layout_marginStart="@dimen/margin_card_medium_2"
+            android:layout_marginBottom="@dimen/margin_card_medium_2"
+            android:checked="true"/>
+
+        <CheckBox
+            android:id="@+id/cb_apple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fruit_apple"
+            android:layout_above="@id/et_my_greetings"
+            android:layout_toEndOf="@id/cb_banana"
+            android:layout_marginLeft="@dimen/margin_card_medium_2"
+            android:layout_marginBottom="@dimen/margin_card_medium_2"/>
+
+        <CheckBox
+            android:id="@+id/cb_orange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fruit_orange"
+            android:layout_above="@id/et_my_greetings"
+            android:layout_toEndOf="@id/cb_apple"
+            android:layout_marginLeft="@dimen/margin_card_medium_2"
+            android:layout_marginBottom="@dimen/margin_card_medium_2"/>
+
+        <TextView
+            android:id="@+id/btn_check_fruits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_check_fruit"
+            android:clickable="true"
+            android:layout_above="@id/cb_orange"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_medium_2"
+            android:foreground="@drawable/bg_ripple_primary"
+            android:padding="@dimen/margin_medium"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold|italic"/>
+
+        <RadioGroup
+            android:id="@+id/rg_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/btn_check_fruits"
+            android:layout_marginLeft="@dimen/margin_card_medium_2"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_gentleman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/gender_male" />
+
+            <RadioButton
+                android:id="@+id/rb_lady"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gender_female" />
+
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        app:srcCompat="@drawable/ic_waee"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

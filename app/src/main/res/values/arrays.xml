@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="lunch_selection">
+        <item>European Food</item>
+        <item>Chinese Food</item>
+        <item>Italian Food</item>
+        <item>Mexican Food</item>
+        <item>Myanmar Local Food</item>
+    </string-array>
+
+    <string-array name="additional_drinks">
+        <item>Water</item>
+        <item>Wine</item>
+        <item>Whisky</item>
+        <item>Cola</item>
+        <item>Cider</item>
+    </string-array>
+
+    <string-array name="from_cities">
+        <item>London</item>
+        <item>Los Angeles</item>
+        <item>New York</item>
+        <item>Las Vegas</item>
+        <item>Miami</item>
+    </string-array>
+
+    <string-array name="to_cities">
+        <item>San Fransisco</item>
+        <item>Chicago</item>
+        <item>Boston</item>
+        <item>San Diego</item>
+        <item>Seattle</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.waewaee.padc_day1">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PADCDay1">
+        <activity android:name=".BookFlightActivity"
+                android:label="Book your flight"
+                android:theme="@style/Theme.PADCDay1.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".EmployeeList"
+            android:label="Employee List"
+            android:theme="@style/Theme.PADCDay1.NoActionBar">
+        </activity>
+        <activity
+            android:name=".EmployeeForm"
+            android:label="Employee Form"
+            android:theme="@style/Theme.PADCDay1.NoActionBar"></activity>
+        <activity android:name=".ContainerComponentsActivity" />
+        <activity
+            android:name=".UIComponents2Activity"
+            android:label="Day-5"
+            android:theme="@style/Theme.PADCDay1.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.PADCDay1.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".TestActivity"
+            android:label="PADC-Day2"
+            android:theme="@style/Theme.PADCDay1.NoActionBar" />
+    </application>
+
+</manifest>

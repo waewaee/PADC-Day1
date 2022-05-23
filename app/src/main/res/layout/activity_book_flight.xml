@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookFlightActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5"/>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bs_rounded_corner"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Book your flight"
+                    android:textSize="32sp"
+                    android:textColor="@color/white"
+                    android:layout_margin="@dimen/margin_medium_2"/>
+
+                <TextView
+                    android:id="@+id/tv_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Flight"
+                    android:drawableStart="@drawable/ic_flight"
+                    android:drawablePadding="8dp"
+                    android:textSize="24sp"
+                    android:textColor="@color/white"
+                    android:layout_margin="@dimen/margin_medium_2"
+                    android:layout_below="@id/tv_title" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_icon"
+                    android:layout_margin="@dimen/margin_medium_2">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_round_trip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Roundtrip"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/btn_rounded_corner2"
+                        android:backgroundTint="#ffbcaf"
+                        android:layout_marginEnd="@dimen/margin_medium_2"/>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_one_way"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="One way"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@color/transparent"
+                        android:layout_marginStart="@dimen/margin_medium_2"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="From"
+                android:textColor="#4B4B4B"
+                android:drawableStart="@drawable/ic_location"
+                android:drawablePadding="8dp"
+                android:layout_margin="@dimen/margin_medium_2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/relativeLayout"/>
+
+            <TextView
+                android:id="@+id/tv_to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="To"
+                android:textColor="#4B4B4B"
+                android:layout_margin="@dimen/margin_medium_2"
+                app:layout_constraintStart_toEndOf="@id/guide"
+                app:layout_constraintTop_toBottomOf="@id/relativeLayout"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_from"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium_2"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guide"
+                app:layout_constraintTop_toBottomOf="@id/tv_to">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_from"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:hint="Tbilisi"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_to"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium_2"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:layout_constraintStart_toEndOf="@id/guide"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_to">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_to"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:hint="Amsterdam"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_departure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Departure"
+                android:textColor="#4B4B4B"
+                android:drawableStart="@drawable/ic_date"
+                android:drawablePadding="8dp"
+                android:layout_margin="@dimen/margin_medium_2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/til_from"/>
+
+            <TextView
+                android:id="@+id/tv_return"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Return"
+                android:textColor="#4B4B4B"
+                android:layout_margin="@dimen/margin_medium_2"
+                app:layout_constraintStart_toEndOf="@id/guide"
+                app:layout_constraintTop_toBottomOf="@id/til_to"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_departure"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium_2"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guide"
+                app:layout_constraintTop_toBottomOf="@id/tv_departure">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_departure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:hint="Mon, Aug 13"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_return"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium_2"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:layout_constraintStart_toEndOf="@id/guide"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_departure">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_return"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:hint="Sun, Aug 18"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_passengers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Passengers"
+                android:textColor="#4B4B4B"
+                android:layout_margin="@dimen/margin_medium_2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/til_departure"/>
+
+            <TextView
+                android:id="@+id/tv_class"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Class"
+                android:textColor="#4B4B4B"
+                android:layout_margin="@dimen/margin_medium_2"
+                app:layout_constraintStart_toEndOf="@id/guide"
+                app:layout_constraintTop_toBottomOf="@id/til_departure"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_passengers"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium_2"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guide"
+                app:layout_constraintTop_toBottomOf="@id/tv_passengers">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_passengers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:hint="4"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_class"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium_2"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:layout_constraintStart_toEndOf="@id/guide"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_class">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_class"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:hint="Economy"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Search flights"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:background="@drawable/btn_rounded_corner"
+                android:backgroundTint="@color/md_light_blue_900"
+                android:drawableEnd="@drawable/ic_search_flight"
+                android:drawablePadding="2dp"
+                android:layout_marginStart="@dimen/margin_xxlarge"
+                android:layout_marginTop="@dimen/margin_large"
+                android:layout_marginBottom="@dimen/margin_medium_2"
+                app:layout_constraintTop_toBottomOf="@id/til_passengers"/>
+
+            <TextView
+                android:id="@+id/tv_best_offer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Best Value Offers to Europe"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:layout_margin="@dimen/margin_large"
+                app:layout_constraintTop_toBottomOf="@id/btn_search"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium_3"
+                app:layout_constraintTop_toBottomOf="@id/tv_best_offer">
+
+                <ImageView
+                    android:id="@+id/iv_parague"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/parague"/>
+
+                <TextView
+                    android:id="@+id/tv_parague"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Parague"
+                    android:textColor="@color/md_grey_900"
+                    android:layout_marginTop="@dimen/margin_xxlarge"
+                    android:layout_marginStart="@dimen/margin_xlarge"/>
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="From $860"
+                    android:layout_marginTop="@dimen/margin_xxlarge"
+                    android:layout_marginStart="@dimen/margin_large"/>
+
+                <ImageView
+                    android:id="@+id/iv_click_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow"
+                    android:layout_marginTop="@dimen/margin_xxlarge"
+                    android:layout_marginStart="@dimen/margin_large"/>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EmployeeForm">
+    
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/ToolBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"/>
+        
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/iv_contact"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="60dp"
+                android:src="@drawable/contact"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageView
+                android:id="@+id/iv_icon1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_icon"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_xlarge"
+                app:layout_constraintTop_toBottomOf="@id/iv_contact"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilFullName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_large"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                app:layout_constraintTop_toBottomOf="@id/iv_contact"
+                app:layout_constraintStart_toEndOf="@id/iv_icon1"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etFullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:hint="Full Name"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/iv_icon2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_icon"
+                android:layout_margin="@dimen/margin_medium_2"
+                app:layout_constraintTop_toBottomOf="@id/tilFullName"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilFatherName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                app:layout_constraintTop_toBottomOf="@id/tilFullName"
+                app:layout_constraintStart_toEndOf="@id/iv_icon2"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etFatherName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:hint="Father Name"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/iv_icon3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_calendar"
+                android:layout_margin="@dimen/margin_medium_2"
+                app:layout_constraintTop_toBottomOf="@id/tilFatherName"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <Button
+                android:id="@+id/btn_DOB"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Tap to choose"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/colorAccent"
+                android:layout_margin="@dimen/margin_medium_2"
+                app:layout_constraintStart_toEndOf="@id/iv_icon3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tilFatherName"/>
+
+            <ImageView
+                android:id="@+id/iv_icon4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_email"
+                android:layout_margin="@dimen/margin_medium_2"
+                app:layout_constraintTop_toBottomOf="@id/btn_DOB"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilEmail"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                app:layout_constraintTop_toBottomOf="@id/btn_DOB"
+                app:layout_constraintStart_toEndOf="@id/iv_icon4"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:hint="Email id"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/iv_icon5"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_phone"
+                android:layout_margin="@dimen/margin_medium_2"
+                app:layout_constraintTop_toBottomOf="@id/tilEmail"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilMobile"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                app:layout_constraintTop_toBottomOf="@id/tilEmail"
+                app:layout_constraintStart_toEndOf="@id/iv_icon5"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:hint="Mobile Number"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/iv_icon6"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_gender"
+                android:layout_margin="@dimen/margin_medium_2"
+                app:layout_constraintTop_toBottomOf="@id/tilMobile"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <RadioGroup
+                android:id="@+id/rg_gender"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/margin_medium_2"
+                app:layout_constraintTop_toBottomOf="@id/tilMobile"
+                app:layout_constraintStart_toEndOf="@id/iv_icon6"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <RadioButton
+                    android:id="@+id/rb_male"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:checked="true"/>
+
+                <RadioButton
+                    android:id="@+id/rb_female"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Female"/>
+
+            </RadioGroup>
+
+            <ImageView
+                android:id="@+id/iv_icon7"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_location"
+                android:layout_margin="@dimen/margin_medium_2"
+                app:layout_constraintTop_toBottomOf="@id/rg_gender"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilCity"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                app:layout_constraintTop_toBottomOf="@id/rg_gender"
+                app:layout_constraintStart_toEndOf="@id/iv_icon6"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:hint="City"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/iv_icon8"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_accept"
+                android:layout_margin="@dimen/margin_medium_2"
+                app:layout_constraintTop_toBottomOf="@id/tilCity"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <CheckBox
+                android:id="@+id/cb_accept"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Accept Terms and Conditions"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                app:layout_constraintTop_toBottomOf="@id/tilCity"
+                app:layout_constraintStart_toEndOf="@id/iv_icon8"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/margin_medium_2"
+        app:srcCompat="@drawable/ic_baseline_add_24"
+        android:backgroundTint="@color/colorPrimary"
+        />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
